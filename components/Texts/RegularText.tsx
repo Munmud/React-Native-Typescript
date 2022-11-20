@@ -11,8 +11,8 @@ const StyledText = styled.Text`
   font-family: Lato-Bold;
 `;
 
-const RegulatText: FunctionComponent<TextProps> = (props) => {
+const RegularText: FunctionComponent<TextProps> = (props) => {
   return <StyledText style={props.textStyles}>{props.children}</StyledText>;
 };
 
-export default RegulatText;
+export default RegularText;

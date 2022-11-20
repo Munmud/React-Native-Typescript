@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 import { colors } from "../color";
-import RegulatText from "../Texts/RegularText";
+import RegularText from "../Texts/RegularText";
 
 const ButtonView = styled.TouchableOpacity`
   align-items: center;
@@ -29,7 +29,7 @@ interface ButtonProps {
 const RegularButton: FunctionComponent<ButtonProps> = (props) => {
   return (
     <ButtonView onPress={props.onPress} style={props.btnStyles}>
-      <RegulatText textStyles={props.textStyles}>{props.children}</RegulatText>
+      <RegularText textStyles={props.textStyles}>{props.children}</RegularText>
     </ButtonView>
   );
 };
