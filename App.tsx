@@ -1,8 +1,10 @@
+import "react-native-gesture-handler";
 import React, { useCallback, useEffect } from "react";
-import Welcome from "./screens/Welcome";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { View } from "react-native";
+
+import RootStack from "./navigators/RootStack";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -27,12 +29,5 @@ export default function App() {
     return null;
   }
 
-  return (
-    <View
-      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-      onLayout={onLayoutRootView}
-    >
-      <Welcome />
-    </View>
-  );
+  return <RootStack />;
 }
